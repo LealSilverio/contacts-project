@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const userController = require('../controllers/name')
+const nameController = require('../controllers/name')
 
-router.get('/', (req, res) => { userController.getName});
+router.get('/', nameController.getName);
 
 module.exports = router
