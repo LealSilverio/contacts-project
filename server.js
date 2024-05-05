@@ -1,24 +1,20 @@
 const express = require('express');
-const { MongoClient } = require('mongodb');
-const ___ = require('dotenv'); 
+const cors = require('cors');
+const db = require('./db/database')
+
+const port = process.env.PORT || 5000;
 const app = express();
 
-
-app.use('/', require('./routes/index'));
-
-const client = new MongoClient(process.env.MONGODB_URI);
+app
+    .use('/', require('./routes/index'))
+    .use(cors);
 
 // Connect to the MongoDB server
-async function connectDB() {
-    try {
-        await client.connect();
-        console.log('Connected to the MongoDB database');
-
-        app.listen(5000);
-        console.log(`Web Server is listening at port 5000`);
-    } catch (error) {
-        console.error('Error connecting to the MongoDB database:', error);
+db.connectDB((err, db) => {
+    if (err) {
+      console.log(err);
+    } else {
+      app.listen(port);
+      console.log(`Connected to DB and listening on ${port}`);
     }
-}
-
-connectDB();
+  });
