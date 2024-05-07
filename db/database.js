@@ -23,9 +23,9 @@ function connectDB(callback) {
 
 const getDB = () => {
     if (!db) {
-      throw Error('Db not initialized');
+      throw Error('Database not initialized');
     }
     return db;
   };
 
-module.exports = { connectDB, getDB }
+module.exports = { connectDB, getDB };

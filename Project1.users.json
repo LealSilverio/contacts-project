@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "6546a227671d651aa3c3b91b"
+  },
+  "firstName": "Morgan",
+  "lastName": "Burbank",
+  "email": "morgan@gmail.com",
+  "favoriteColor": "blue",
+  "birthday": "09/01/1998"
+},
+{
+  "_id": {
+    "$oid": "6546a31d671d651aa3c3b91c"
+  },
+  "firstName": "Marcello",
+  "lastName": "Silverio",
+  "email": "brspmso@gmail.com",
+  "favoriteColor": "blue",
+  "birthday": "07/08/1968"
+},
+{
+  "_id": {
+    "$oid": "6546a39f671d651aa3c3b91d"
+  },
+  "firstName": "Luciana",
+  "lastName": "Ribeiro Leal Silverio",
+  "email": "luciana_silverio@hotmail.com",
+  "favoriteColor": "green",
+  "birthday": "04/16/1973"
+}]
