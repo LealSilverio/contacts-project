@@ -1,0 +1,5 @@
+# Get all contacts
+GET https://contacts-project-a53w.onrender.com/contacts
+
+# Get single contact
+GET https://contacts-project-a53w.onrender.com/contacts/6546a227671d651aa3c3b91b
