@@ -3,3 +3,28 @@ GET https://contacts-project-a53w.onrender.com/contacts
 
 # Get single contact
 GET https://contacts-project-a53w.onrender.com/contacts/6546a227671d651aa3c3b91b
+
+# Create contacts
+POST http://contacts-project-a53w.onrender.com/contacts HTTP/1.1
+Content-Type: application/json
+{
+  "firstName": "Jonh",
+  "lastName": "Noyes",
+  "email": "test@email.com",
+  "favoriteColor": "Pink",
+  "birthday": "6/4/1994"
+}
+
+# Update contact
+PUT http://contacts-project-a53w.onrender.com/contacts/6546a227671d651aa3c3b91b HTTP/1.1
+{
+  "id": 123,
+  "firstName": "Updated John",
+  "lastName": "Updated Noyes",
+  "email": "updated.test@email.com",
+  "favoriteColor": "Pink",
+  "birthday": "6/4/1994"
+}
+
+# Delete contact
+DELETE http://contacts-project-a53w.onrender.com/contacts/6546a227671d651aa3c3b91b HTTP/1.1
