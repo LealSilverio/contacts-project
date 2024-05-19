@@ -5,9 +5,13 @@ const db = require('./db/database');
 const port = process.env.PORT || 5000;
 const app = express();
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger-output.json');
+
 app
   .use(cors())
   .use('/', require('./routes'))
+  .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 ;
 
 // Connect to the MongoDB server
